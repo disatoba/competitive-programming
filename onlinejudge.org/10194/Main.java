@@ -3,7 +3,11 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 /**
- *
+ * This is my first Java 8 version of the 10194 Football (aka Soccer) problem from onlinejudge.org before UVa onlinejudge.
+ * This version uses the comparing static function and the thenComparing default function from Comparator interface to sort
+ * the Teams list.
+ * onlinejudge.org verdict accepted
+ * @author Diego Satoba
  */
 public class Main {
     static class Team {
@@ -12,7 +16,7 @@ public class Main {
         Team(String name) {
             this.name = name;
         }
-
+        // The following getter methods are needed to sort the Team list using method references and Comparator methods
         public String getName() {
             return this.name;
         }
@@ -51,6 +55,7 @@ public class Main {
     }
 
     public static void main(String [] args) throws Exception {
+        // Setting the charset to InputStreamReader and OutputStreamWriter is weird but needed to get AC
         try (BufferedReader in = new BufferedReader(new InputStreamReader(System.in, StandardCharsets.ISO_8859_1));
             PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out, StandardCharsets.ISO_8859_1))) {
             for (int T=Integer.parseInt(in.readLine().trim()); T-->0; ) {
