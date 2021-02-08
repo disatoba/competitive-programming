@@ -9,7 +9,7 @@ import java.util.*;
  * onlinejudge.org verdict accepted
  * @author Diego Satoba
  */
-public class Main {
+class Main {
     static class Team {
         String name;
         int wins, ties, losses, goalsScored, goalsAgainst;
